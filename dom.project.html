@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Projects</title>
+    <style>
+     .style {
+      font-family: Arial;
+      font-size: 15px;
+     }
+
+
+      /*
+     .sub-button {
+      background-color: red;
+      color: white;
+      padding: 10px;
+      border-radius: 50px;
+      border: none;
+     }
+
+     .sub-subscribed {
+      background-color: rgb(240, 240, 240);
+      color: black;
+     }
+      */
+
+
+      /*
+      .js-button {
+        background-color: blue;
+        color: white;
+      }
+        */
+    </style>
+   
+    </head>
+    <body>
+
+      <p class="style">Check if you are eligible to do jamb this year.</p>
+
+     <input class="js-age" placeholder="Enter your age" onkeydown="
+     suicide1();
+     ">
+
+     <button onclick="
+      suicide();
+     
+     ">Check</button>
+
+     <p class="js-par style"></p>
+
+
+      <!--
+     <button class="js-sub sub-button" onclick="
+      subscribe();
+      ">Subscribe</button>
+      -->
+
+      <!--
+     <input class="js-1" placeholder="Enter your name" type="text" onkeydown="
+      dom6();
+      ">
+
+     <button onclick="
+     dom1();
+     ">Enter</button>
+
+     <p class="js-5"></p>
+     -->
+
+
+
+      <!--
+     <input class="js-search" placeholder="Type something!">
+      <button class="js-button" onclick="
+         scope1();
+        
+        ">Click me</button>
+
+       <p class="js-p"></p>
+
+       <input class="js-2" onkeydown="
+        onkey();
+       ">
+
+       <button class="js-3" onclick="
+       calculate();
+       
+       ">Calculate</button>
+
+       <p class="js-4"></p>
+      -->
+    </body>
+
+    <script>
+     function suicide1 () {
+      let key = (event.key);
+
+     if (event.key === 'Enter') {
+      event.key = suicide();
+     }
+     }
+
+
+     function suicide () {
+     const nun = document.querySelector('.js-age');
+
+      let sum = nun.value;
+
+      if (sum >= 16) {
+        sum = 'You can do jamb.';
+      } else if (sum < 16) {
+        sum = 'You can not do Jamb this year.';
+      } 
+
+      document.querySelector('.js-par').innerHTML = `${sum}`;
+     }
+
+   
+
+ 
+
+
+      /*
+     function subscribe () {
+      const sub2 = document.querySelector('.js-sub');
+
+
+      if (sub2.innerText === 'Subscribe') {
+        sub2.innerText = 'Subscribed';
+        sub2.classList.add('sub-subscribed');
+      } else {
+        sub2.innerText = 'Subscribe';
+        sub2.classList.remove('sub-subscribed');
+      }
+     }
+      */
+
+
+      /*
+       function dom6 () {
+      if (event.key === 'Enter') {
+        dom1();
+      }
+      }
+
+
+     function dom1 () {
+      const dom2 = document.querySelector('.js-1');
+
+      let dom3 = dom2.value;
+
+      let dom4 = 'dom5';
+
+      if (dom3 === 'Jhosua' || dom3 === 'jhosua') {
+        dom5 = 'Adeoye';
+      } else if (dom3 === 'Emmanuel' || dom3 === 'emmanuel') {
+        dom5 = 'Ojemola';
+      } else if (dom3 === 'Samuel' || dom3 === 'samuel') {
+        dom5 = 'Adeoye';
+      } else if (dom3 === 'Ezekiel' || dom3 === 'ezekiel') {
+        dom5 = 'Adeoye';
+      } else if (dom3 === 'John' || dom3 === 'john') {
+        dom5 = 'Dairo';
+      } else if (dom3 === 'Victor' || dom3 === 'victor') {
+        dom5 = 'Dairo';
+      }
+
+      console.log(dom3);
+
+      document.querySelector('.js-5').innerHTML = `Your name is ${dom5}  ${dom3}`;
+     }
+      */
+
+
+      /*
+     function onkey () {
+       if (event.key === 'Enter') {
+        calculate();
+       }
+     }
+
+
+     function calculate () {
+      const calculateElement = document.querySelector('.js-2');
+
+      let calc = Number(calculateElement.value);
+
+      if (calc < 50) {
+        calc = calc + 10;
+      }
+
+     document.querySelector('.js-4').innerHTML = `$${calc}`;
+     }
+
+
+      /*
+     function scope1 () {
+       const clickElement = document.querySelector('.js-search');
+
+       let java = clickElement.value;
+
+       java = 'Hell0, world';
+
+       document.querySelector('.js-p').innerHTML = `${java}`;
+     }
+       */
+
+
+    </script>
+</html>

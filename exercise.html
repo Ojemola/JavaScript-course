@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <style>
+   .button-1 {
+    background-color: yellow;
+   }
+
+   .button-2 {
+    background-color: red;
+   }
+   </style>
+  </head>
+  <body>
+    <!--this is paragraph-->
+    <p>
+      Adults plain cotton T-shirt
+    </p>
+    <p>
+      Price: $7.99
+    </p>
+    <button onclick="
+    console.log('cart reset')
+     addCart = 0;
+     console.log(`added: ${addCart}`);
+    ">Add to cart</button>
+
+
+    <button onclick="
+     addCart += 1;
+     console.log(`added: ${addCart}`);
+
+    " class="button-2">Buy now</button>
+
+    <button onclick="
+    addCart += 2;
+    console.log(`added: ${addCart}`);
+    ">+2</button>
+
+    <button onclick="
+     addCart -= 2;
+     console.log(`Removed: ${addCart}`);
+    ">-2</button>
+
+    <button onclick="
+     addCart -= 3;
+     console.log(`Removed: ${addCart}`);
+    ">-3</button>
+    <script>
+      let addCart = 0;
+    </script>
+  </body>
+</html>
