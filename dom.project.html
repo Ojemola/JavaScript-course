@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
+   <title>Projects</title>
     <style>
+      body {
+        font-size: 15px;
+        font-family: Arial;
+        font-weight: bold;
+      }
+
+      .button {
+        background-color: green;
+        border: none;
+        padding: 6px;
+        width: 60px;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(216, 70, 70);
+        transition: 0.5s;
+         box-shadow: 8px 8px 10px rgba(10, 20, 100, 0.15);
+      }
+
+      button:active {
+        opacity: 0.7;
+        transition: 0.6s;
+      }
+
+      .input {
+        padding: 4px;
+        border-style: solid;
+        border-color: grey;
+        border-radius: 12px;
+        padding-left: 12px;
+      }
+
+      input:hover {
+       
+      }
+      }
+      /*
      .style {
       font-family: Arial;
       font-size: 15px;
      }
+      */
 
 
       /*
@@ -35,21 +77,27 @@
    
     </head>
     <body>
+      <ol>
+        <li>
+     <p>Check your vote chance!</p>
+     </li>
+      </ol>
+      <div class="div">
+      <input class="js-select input" placeholder="Enter your age" onkeydown="
+       const dom = (event.key);
 
-      <p class="style">Check if you are eligible to do jamb this year.</p>
+       if (dom === 'Enter') {
+        divs();
+       }
+      ">
+      
 
-     <input class="js-age" placeholder="Enter your age" onkeydown="
-     suicide1();
-     ">
+      <button class="button" onclick="
+       divs();
+      ">Check</button>
+      </div>
 
-     <button onclick="
-      suicide();
-     
-     ">Check</button>
-
-     <p class="js-par style"></p>
-
-
+      <p class="js-p"></p>
       <!--
      <button class="js-sub sub-button" onclick="
       subscribe();
@@ -93,34 +141,25 @@
     </body>
 
     <script>
-     function suicide1 () {
-      let key = (event.key);
+      function divs () {
+       const inputElement = document.querySelector('.js-select');
 
-     if (event.key === 'Enter') {
-      event.key = suicide();
-     }
-     }
+       let check = Number(inputElement.value);
 
+       let result;
 
-     function suicide () {
-     const nun = document.querySelector('.js-age');
+       if (check >= 18) {
+        result = 'You can vote!';
+       } else if (check === 17) {
+         result = 'One more year to go!';
+       } else {
+        result = 'You cannot vote yet!';
+       };
 
-      let sum = nun.value;
+       document.querySelector('.js-p').innerHTML = result;
 
-      if (sum >= 16) {
-        sum = 'You can do jamb.';
-      } else if (sum < 16) {
-        sum = 'You can not do Jamb this year.';
-      } 
-
-      document.querySelector('.js-par').innerHTML = `${sum}`;
-     }
-
-   
-
- 
-
-
+       inputElement.value = '';
+      }
       /*
      function subscribe () {
       const sub2 = document.querySelector('.js-sub');
